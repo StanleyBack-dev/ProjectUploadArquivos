@@ -20,6 +20,7 @@ Route::get('/', [UploadController::class, 'ListUploadArquivos'])->name('upload.l
 Auth::routes();
 
 Route::get('/upload', [UploadController::class, 'create'])->name('upload.create');
+Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
